@@ -1,12 +1,18 @@
-﻿iOS-like checkbox for SWT
+﻿iOS-like widgets for SWT
 
-#Build status
+#Build status 
 [![Build Status](https://secure.travis-ci.org/germantech/ios-widgets.png?branch=master)](http://travis-ci.org/germantech/ios-widgets)
+
+<hr />
 
 #Screenshot
 ![Screenshot](http://i.imgur.com/6lSlG.png)
 
 <hr />
+
+#Actual widgets
+* Checkbox
+* Button toggle
 
 #TODO
 
