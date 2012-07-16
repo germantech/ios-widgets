@@ -6,7 +6,7 @@
 <hr />
 
 #Screenshot
-![Screenshot](http://i.imgur.com/6lSlG.png)
+![Screenshot](http://i.imgur.com/CKY2h.png)
 
 <hr />
 
