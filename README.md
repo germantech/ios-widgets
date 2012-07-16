@@ -6,5 +6,5 @@
 
 * Get rid of `slider.png`;  
 * Image transition;  
-* Generates a jar or plug-in (for RCP apps);  
+* ~~Generates a jar or plug-in (for RCP apps);~~    
 * Show a different style when disabled;  
