@@ -10,3 +10,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.jface.databinding;bundle-version="1.6.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: br.com.germantech.ioswidgets.checkbox,
+ br.com.germantech.ioswidgets.checkbox.binder,
+ br.com.germantech.ioswidgets.toggle,
+ br.com.germantech.ioswidgets.toggle.binder
