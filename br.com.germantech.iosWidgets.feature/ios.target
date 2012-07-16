@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.8"?>
 
-<target name="ios" sequenceNumber="1">
+<target name="ios" sequenceNumber="3">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.platform.feature.group" version="4.2.0.v20120608-135145-9JF7BHV8FyMteji0Oi_ePMz0xuZ8TVo7lV0z0ecb"/>
-<unit id="org.eclipse.equinox.executable.feature.group" version="3.6.0.v20120522-1813-7P7OG2BFLWUl7UmbVUO9iCm"/>
-<repository location="http://download.eclipse.org/releases/juno"/>
+<unit id="org.eclipse.platform.feature.group" version="3.8.0.v20120607-071945-9gF7jI7nG5qByXMVdkhRMWBQlF4PnDCLybDCPQ"/>
+<repository location="http://download.eclipse.org/eclipse/updates/3.8"/>
 </location>
 </locations>
 </target>
