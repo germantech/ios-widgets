@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.com.germantech.iosWidgets</groupId>
+		<artifactId>ws</artifactId>
+		<version>0.0.1</version>
+		<relativePath>../br.com.germantech.iosWidgets.parent/pom.xml</relativePath>
+	</parent>
+	<groupId>br.com.germantech.iosWidgets</groupId>
+	<artifactId>br.com.germantech.iosWidgets</artifactId>
+	<version>0.0.1</version>
+	<packaging>eclipse-repository</packaging>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-p2-repository-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<includeAllDependencies>true</includeAllDependencies>
+					<createArtifactRepository>true</createArtifactRepository>
+					<compress>true</compress>
+				</configuration>
+				
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>archive-repository</goal>
+						</goals>
+					</execution>
+				</executions>
+				
+			</plugin>
+			
+			<!-- 
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-p2-director-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<executions>
+					<execution>
+						<id>materialize-products</id>
+						<goals>
+							<goal>materialize-products</goal>
+						</goals>
+						<configuration>
+							<profile>Installer</profile>
+						</configuration>
+					</execution>
+					<execution>
+						<id>archive-products</id>
+						<goals>
+							<goal>archive-products</goal>
+						</goals>
+					</execution>
+				</executions>
+
+				<configuration>
+					<products>
+						<product>
+							<id>iosWidgets</id>
+							<rootFolder>iosWidgets</rootFolder>
+							<attachId>${project.version}</attachId>
+						</product>
+					</products>
+					<formats>
+						<win32>zip</win32> 
+						<linux>tar.gz</linux>
+						<macosx>tar.gz</macosx>
+					</formats>
+				</configuration>
+			</plugin>
+			 -->
+		</plugins>
+	</build> 
+</project>
