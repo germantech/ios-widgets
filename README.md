@@ -1,5 +1,7 @@
 ﻿iOS-like checkbox for SWT
 
+[![Build Status](https://secure.travis-ci.org/germantech/ios-widgets.png?branch=master)](http://travis-ci.org/germantech/ios-widgets)
+
 ![Screenshot](http://i.imgur.com/6lSlG.png)
 
 #TODO
