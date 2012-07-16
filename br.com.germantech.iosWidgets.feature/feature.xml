@@ -43,20 +43,6 @@
          unpack="false"/>
 
    <plugin
-         id="org.eclipse.core.databinding.observable"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.core.databinding.property"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
          id="org.eclipse.jface.databinding"
          download-size="0"
          install-size="0"
@@ -65,13 +51,6 @@
 
    <plugin
          id="br.com.germantech.iosWidgets.plugin"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.eclipse.core.runtime"
          download-size="0"
          install-size="0"
          version="0.0.0"

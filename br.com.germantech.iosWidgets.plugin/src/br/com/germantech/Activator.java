@@ -1,4 +1,4 @@
-package br.com.germantech.ioswidgets;
+package br.com.germantech;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
