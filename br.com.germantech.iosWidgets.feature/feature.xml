@@ -2,7 +2,7 @@
 <feature
       id="br.com.germantech.iosWidgets.feature"
       label="iOS Widget"
-      version="0.0.1"
+      version="0.0.2"
       plugin="br.com.germantech.iosWidgets.plugin">
 
    <description url="http://www.example.com/description">
