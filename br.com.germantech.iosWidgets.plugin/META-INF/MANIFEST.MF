@@ -14,3 +14,4 @@ Export-Package: br.com.germantech.ioswidgets.checkbox,
  br.com.germantech.ioswidgets.checkbox.binder,
  br.com.germantech.ioswidgets.toggle,
  br.com.germantech.ioswidgets.toggle.binder
+Bundle-Vendor: GermanTech Sistemas
