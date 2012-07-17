@@ -6,7 +6,7 @@
 <hr />
 
 #Screenshot
-![Screenshot](http://i.imgur.com/CKY2h.png)
+![Screenshot](http://i.imgur.com/RHaWM.png)
 
 <hr />
 
@@ -20,3 +20,4 @@
 * Image transition;  
 * ~~Generates a jar or plug-in (for RCP apps);~~    
 * Show a different style when disabled;  
+* Combobox

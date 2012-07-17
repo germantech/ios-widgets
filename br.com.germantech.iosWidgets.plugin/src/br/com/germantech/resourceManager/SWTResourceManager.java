@@ -8,7 +8,7 @@
  * Contributors:
  *    Google, Inc. - initial API and implementation
  *******************************************************************************/
-package br.com.germantech.rm;
+package br.com.germantech.resourceManager;
 
 import java.io.FileInputStream;
 import java.io.IOException;

@@ -5,8 +5,6 @@ import org.eclipse.swt.events.MouseAdapter;
 import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.events.PaintEvent;
 import org.eclipse.swt.events.PaintListener;
-import org.eclipse.swt.graphics.Color;
-import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Canvas;
@@ -14,7 +12,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 
-import br.com.germantech.rm.SWTResourceManager;
+import br.com.germantech.ioswidgets.IWidgetConstants;
 
 /**
  * iPhone checkbox-like for SWT
@@ -23,19 +21,6 @@ import br.com.germantech.rm.SWTResourceManager;
  */
 public class IOSCheckbox extends Canvas {
 	
-	private static Display DISPLAY = Display.getDefault();
-	
-	private static Color COLOR_TOP = SWTResourceManager.getColor(174, 174, 174);
-	private static Color COLOR_BOTTOM = SWTResourceManager.getColor(250, 250, 250);
-	
-	private static Color COLOR_TOP_SELECTED = SWTResourceManager.getColor(43, 93, 154);
-	private static Color COLOR_BOTTOM_SELECTED = SWTResourceManager.getColor(116, 161, 216);
-	
-	private static Color COLOR_WHITE = SWTResourceManager.getColor(SWT.COLOR_WHITE);
-	private static Color COLOR_DARK_GRAY = SWTResourceManager.getColor(120,120,120);
-	
-	private static Font OS_FONT = SWTResourceManager.getFont(DISPLAY.getSystemFont().getFontData()[0]+"", 11, SWT.BOLD);
-	
 	private static Image SLIDER = new Image(Display.getDefault(), IOSCheckbox.class.getResourceAsStream("slider.png"));
 	
 //	private static Cursor CURSOR_NO = new Cursor(DISPLAY, SWT.CURSOR_NO);
@@ -43,8 +28,6 @@ public class IOSCheckbox extends Canvas {
 	
 	private static int SLIDER_WIDTH = SLIDER.getImageData().width;
 	private static int HEIGHT = 26;
-	
-	private static int ARC = 6;
 	
 	private boolean selected = false;
 	
@@ -78,28 +61,28 @@ public class IOSCheckbox extends Canvas {
 				e.gc.setAntialias(SWT.ON);
 				
 				if(!selected){
-					e.gc.setForeground(COLOR_TOP);
-					e.gc.setBackground(COLOR_BOTTOM);
+					e.gc.setForeground(IWidgetConstants.COLOR_TOP);
+					e.gc.setBackground(IWidgetConstants.COLOR_BOTTOM);
 				
 				} else {
-					e.gc.setForeground(COLOR_TOP_SELECTED);
-					e.gc.setBackground(COLOR_BOTTOM_SELECTED);
+					e.gc.setForeground(IWidgetConstants.COLOR_TOP_SELECTED);
+					e.gc.setBackground(IWidgetConstants.COLOR_BOTTOM_SELECTED);
 				}
 				
 				e.gc.fillGradientRectangle(0, 1,width, HEIGHT-1, true);
-				e.gc.drawRoundRectangle(0, 0, width, HEIGHT, ARC, ARC);
+				e.gc.drawRoundRectangle(0, 0, width, HEIGHT, IWidgetConstants.ARC, IWidgetConstants.ARC);
 				
-				e.gc.setFont(OS_FONT);
+				e.gc.setFont(IWidgetConstants.OS_FONT);
 				
 				
 				if(!selected){
-					e.gc.setForeground(COLOR_DARK_GRAY);
+					e.gc.setForeground(IWidgetConstants.COLOR_DARK_GRAY);
 					e.gc.drawText(textUnselected, width-xOff-8, 6, true);
 					e.gc.drawImage(SLIDER, 0, 0);
 				} else {
 					int end = width - SLIDER_WIDTH + 1;
 					e.gc.drawImage(SLIDER, end, 0);
-					e.gc.setForeground(COLOR_WHITE);
+					e.gc.setForeground(IWidgetConstants.COLOR_WHITE);
 					e.gc.drawText(textSelected, 8, 6, true);
 				}
 				
@@ -124,7 +107,7 @@ public class IOSCheckbox extends Canvas {
 		Label label = null;
 		try {
 			label = new Label(parent, SWT.NONE);
-			label.setFont(OS_FONT);
+			label.setFont(IWidgetConstants.OS_FONT);
 			label.setText(stringToCompute);
 			Point computedSize = label.computeSize(SWT.DEFAULT, SWT.DEFAULT);
 			

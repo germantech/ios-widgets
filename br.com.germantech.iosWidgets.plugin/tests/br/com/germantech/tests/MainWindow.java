@@ -48,7 +48,7 @@ public class MainWindow {
 	 */
 	protected void createContents() {
 		shell = new Shell(SWT.MIN | SWT.CLOSE);
-		shell.setSize(333, 250);
+		shell.setSize(333, 280);
 		shell.setText("iOS checkbox");
 		shell.setLayout(new GridLayout(1, false));
 		
@@ -103,11 +103,19 @@ public class MainWindow {
 		Label lblToggle = new Label(composite, SWT.NONE);
 		lblToggle.setText("Toggle");
 		
-		IOSToggle toggle = new IOSToggle(composite, "String de mensagem");
+		IOSToggle toggle = new IOSToggle(composite, "Untoggle");
 		GridData gd_toggle = new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1);
 		gd_toggle.heightHint = 38;
 		gd_toggle.widthHint = 215;
 		toggle.setLayoutData(gd_toggle);
+		new Label(composite, SWT.NONE);
+		
+		IOSToggle toggle_1 = new IOSToggle(composite, "Toggled");
+		toggle_1.setToggled(true);
+		GridData gd_toggle_1 = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+		gd_toggle_1.heightHint = 30;
+		gd_toggle_1.widthHint = 151;
+		toggle_1.setLayoutData(gd_toggle_1);
 
 	}
 }
