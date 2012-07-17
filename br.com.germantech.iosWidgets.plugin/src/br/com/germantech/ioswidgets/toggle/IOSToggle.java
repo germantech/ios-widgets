@@ -19,13 +19,13 @@ public class IOSToggle extends Canvas {
 	private static Display DISPLAY = Display.getDefault();
 	
 	private static Color COLOR_TOP = SWTResourceManager.getColor(174, 174, 174);
-	private static Color COLOR_BOTTOM = SWTResourceManager.getColor(245, 245, 245);
+	private static Color COLOR_BOTTOM = SWTResourceManager.getColor(250, 250, 250);
 	
-	private static Color COLOR_TOP_SELECTED = SWTResourceManager.getColor(43, 93, 154);
-	private static Color COLOR_BOTTOM_SELECTED = SWTResourceManager.getColor(116, 161, 216);
+	private static Color COLOR_TOP_SELECTED = SWTResourceManager.getColor(66, 128, 0);
+	private static Color COLOR_BOTTOM_SELECTED = SWTResourceManager.getColor(97, 189,0);
 	
 	private static Color COLOR_WHITE = SWTResourceManager.getColor(SWT.COLOR_WHITE);
-	private static Color COLOR_DARK_GRAY = SWTResourceManager.getColor(SWT.COLOR_DARK_GRAY);
+	private static Color COLOR_DARK_GRAY = SWTResourceManager.getColor(120,120,120);
 	
 	private static Font OS_FONT = SWTResourceManager.getFont(DISPLAY.getSystemFont().getFontData()[0]+"", 11, SWT.BOLD);
 	
@@ -69,10 +69,10 @@ public class IOSToggle extends Canvas {
 				
 				if(!toggled){
 					e.gc.setForeground(COLOR_DARK_GRAY);
-					e.gc.drawText(text,8, 6, true);
+					e.gc.drawText(text,8, 5, true);
 				} else {
 					e.gc.setForeground(COLOR_WHITE);
-					e.gc.drawText(text, 8, 6, true);
+					e.gc.drawText(text, 8, 5, true);
 				}
 				
 				setSize(width+1, HEIGHT+1);
