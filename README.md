@@ -2,7 +2,6 @@
 
 ## Build status  [![Build Status](https://secure.travis-ci.org/germantech/ios-widgets.png?branch=master)](http://travis-ci.org/germantech/ios-widgets)
 
-<hr />
 # Sample
 ![Screenshot](http://i.imgur.com/RHaWM.png)
 
