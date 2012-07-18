@@ -123,10 +123,12 @@ public class IOSCheckbox extends Canvas {
 	}
 	
 	public boolean isSelected() {
+		checkWidget();
 		return selected;
 	}
 	
 	public void setSelected(boolean selected) {
+		checkWidget();
 		this.selected = selected;
 	}
 }

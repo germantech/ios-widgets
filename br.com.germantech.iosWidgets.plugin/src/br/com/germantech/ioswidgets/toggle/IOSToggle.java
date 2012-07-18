@@ -90,10 +90,12 @@ public class IOSToggle extends Canvas {
 	}
 	
 	public boolean isToggled() {
+		checkWidget();
 		return toggled;
 	}
 	
 	public void setToggled(boolean toggled) {
+		checkWidget();
 		this.toggled = toggled;
 	}
 

@@ -11,13 +11,13 @@ import org.eclipse.swt.widgets.Widget;
 
 import br.com.germantech.ioswidgets.checkbox.IOSCheckbox;
 
-public class IOSObservableValue extends AbstractObservableValue implements ISWTObservableValue {
+public class IOSCheckboxObservableValue extends AbstractObservableValue implements ISWTObservableValue {
 	
 	private IOSCheckbox button;
 	private Listener listener;
 	private boolean oldValue;
 	
-	public IOSObservableValue(IOSCheckbox imageButton) {
+	public IOSCheckboxObservableValue(IOSCheckbox imageButton) {
 		super(Realm.getDefault());
 		this.button = imageButton;
 	}
