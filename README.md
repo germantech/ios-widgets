@@ -8,7 +8,9 @@
 
 # Current widgets  
 * Checkbox
-* Button toggle
+* Toggle button
+
+==
 
 # TODO  
 
@@ -16,4 +18,6 @@
 * Image transition;  
 * ~~Generates a jar or plug-in (for RCP apps);~~    
 * Show a different style when disabled;  
-* Combobox
+* Combobox  
+* Text with outline border  
+* Button
