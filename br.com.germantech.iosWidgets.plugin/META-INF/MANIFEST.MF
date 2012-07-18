@@ -4,14 +4,23 @@ Bundle-Name: iOS Widget
 Bundle-SymbolicName: br.com.germantech.iosWidgets.plugin;singleton:=true
 Bundle-Version: 0.0.2
 Bundle-Activator: br.com.germantech.Activator
-Require-Bundle: org.eclipse.core.runtime,
+Require-Bundle: org.eclipse.core.runtime;bundle-version="[3.7.0,4.2.0)",
  org.eclipse.core.databinding;bundle-version="1.4.1",
  org.eclipse.jface.databinding;bundle-version="1.6.0",
- org.eclipse.swt;bundle-version="3.8.0"
+ org.eclipse.swt;bundle-version="[3.7.0,4.2.0)"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: br.com.germantech.ioswidgets.checkbox,
- br.com.germantech.ioswidgets.checkbox.binder,
- br.com.germantech.ioswidgets.toggle,
- br.com.germantech.ioswidgets.toggle.binder
+Export-Package: br.com.germantech.ioswidgets;uses:="org.eclipse.swt.graphics",
+ br.com.germantech.ioswidgets.checkbox;uses:="org.eclipse.swt.widgets",
+ br.com.germantech.ioswidgets.checkbox.binder;
+  uses:="org.eclipse.jface.databinding.swt,
+   br.com.germantech.ioswidgets.checkbox,
+   org.eclipse.core.databinding.observable.value,
+   org.eclipse.swt.widgets",
+ br.com.germantech.ioswidgets.toggle;uses:="org.eclipse.swt.widgets",
+ br.com.germantech.ioswidgets.toggle.binder;
+  uses:="org.eclipse.jface.databinding.swt,
+   org.eclipse.core.databinding.observable.value,
+   br.com.germantech.ioswidgets.toggle,
+   org.eclipse.swt.widgets"
 Bundle-Vendor: GermanTech Sistemas
