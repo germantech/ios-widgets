@@ -1,6 +1,7 @@
 package br.com.germantech.ioswidgets.button;
 
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.SWTException;
 import org.eclipse.swt.events.MouseAdapter;
 import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.events.PaintEvent;
@@ -18,14 +19,17 @@ public class IOSButton extends Canvas {
 
 	public IOSButton(final Composite parent, String text) {
 		super(parent, SWT.NONE);
+		if(text == null)
+			throw new SWTException("Button text can't be null");
 		this.text = text;
 		
 		addPaintListener(new PaintListener() {
-			
 			@Override
 			public void paintControl(PaintEvent e) {
-				e.gc.setAntialias(SWT.ON);
 				int width = IOSHelper.computeStringSize(parent, getText()) + 16;
+				
+				e.gc.setAntialias(SWT.ON);
+				e.gc.setFont(IWidgetConstants.OS_FONT);
 				
 				if(!clicked){
 					e.gc.setForeground(IWidgetConstants.COLOR_BUTTON_TOP);
@@ -39,13 +43,12 @@ public class IOSButton extends Canvas {
 				e.gc.setForeground(IWidgetConstants.COLOR_BORDER);
 				e.gc.drawRoundRectangle(0, 0, width, 26, IWidgetConstants.ARC, IWidgetConstants.ARC);
 				
-				e.gc.setFont(IWidgetConstants.OS_FONT);
+				//Draw the shadow
 				e.gc.setForeground(IWidgetConstants.COLOR_BORDER);
 				e.gc.drawString(getText(), 7, 3, true);
 				
 				e.gc.setForeground(SWTResourceManager.getColor(SWT.COLOR_WHITE));
 				e.gc.drawString(getText(), 8, 4, true);
-				
 				
 				setSize(width+1, 27);
 			}
