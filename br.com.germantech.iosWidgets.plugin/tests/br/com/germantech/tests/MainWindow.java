@@ -11,6 +11,7 @@ import org.eclipse.swt.widgets.Shell;
 import br.com.germantech.ioswidgets.checkbox.IOSCheckbox;
 import br.com.germantech.ioswidgets.toggle.IOSToggle;
 import br.com.germantech.ioswidgets.button.IOSButton;
+import br.com.germantech.ioswidgets.slider.IOSSlider;
 
 public class MainWindow {
 
@@ -49,7 +50,7 @@ public class MainWindow {
 	 */
 	protected void createContents() {
 		shell = new Shell(SWT.MIN | SWT.CLOSE);
-		shell.setSize(472, 355);
+		shell.setSize(472, 411);
 		shell.setText("iOS checkbox");
 		shell.setLayout(new GridLayout(1, false));
 		
@@ -130,6 +131,22 @@ public class MainWindow {
 		gd_button.heightHint = 34;
 		gd_button.widthHint = 162;
 		button.setLayoutData(gd_button);
+		
+		Label lblNewLabel_1 = new Label(composite, SWT.SEPARATOR | SWT.HORIZONTAL);
+		lblNewLabel_1.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 1));
+		lblNewLabel_1.setText("New Label");
+		new Label(composite, SWT.NONE);
+		new Label(composite, SWT.NONE);
+		
+		Label lblNewLabel_2 = new Label(composite, SWT.NONE);
+		lblNewLabel_2.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
+		lblNewLabel_2.setText("Slider");
+		
+		IOSSlider slider = new IOSSlider(composite, 200);
+		GridData gd_slider = new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1);
+		gd_slider.widthHint = 305;
+		gd_slider.heightHint = 45;
+		slider.setLayoutData(gd_slider);
 
 	}
 }
