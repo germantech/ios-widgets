@@ -8,7 +8,8 @@
 
 ## Current widgets
 * Checkbox
-* Toggle button
+* Toggle button  
+* Button
 
 ## TODO  
 * Get rid of `slider.png`;  
