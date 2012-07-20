@@ -24,7 +24,7 @@ public class IOSSlider extends Canvas {
 	protected boolean down;
 	protected int x = 0;
 	private int position = 0;
-	private List<IOSSliderListener> listeners = new ArrayList<>();
+	private List<IOSSliderListener> listeners = new ArrayList<IOSSliderListener>();
 
 	public IOSSlider(Composite parent, int totalSize) {
 		super(parent, SWT.NONE);
