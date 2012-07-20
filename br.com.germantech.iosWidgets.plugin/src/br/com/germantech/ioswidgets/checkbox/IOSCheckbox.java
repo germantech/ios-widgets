@@ -6,12 +6,11 @@ import org.eclipse.swt.events.MouseEvent;
 import org.eclipse.swt.events.PaintEvent;
 import org.eclipse.swt.events.PaintListener;
 import org.eclipse.swt.graphics.Image;
-import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Canvas;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
-import org.eclipse.swt.widgets.Label;
 
+import br.com.germantech.helpers.IOSHelper;
 import br.com.germantech.ioswidgets.IWidgetConstants;
 
 /**
@@ -53,8 +52,8 @@ public class IOSCheckbox extends Canvas {
 			public void paintControl(PaintEvent e) {
 				String biggestString = textSelected.length() > textUnselected.length() ? textSelected : textUnselected;
 				
-				int x = computeStringSize(parent, biggestString);
-				int xOff = computeStringSize(parent, textUnselected);
+				int x = IOSHelper.computeStringSize(parent, biggestString);
+				int xOff = IOSHelper.computeStringSize(parent, textUnselected);
 				int status = x+16;
 				int width = status+SLIDER_WIDTH;
 				
@@ -69,7 +68,7 @@ public class IOSCheckbox extends Canvas {
 					e.gc.setBackground(IWidgetConstants.COLOR_BOTTOM_SELECTED);
 				}
 				
-				e.gc.fillGradientRectangle(0, 1,width, HEIGHT-1, true);
+				e.gc.fillGradientRectangle(1, 1,width-1, HEIGHT-1, true);
 				e.gc.drawRoundRectangle(0, 0, width, HEIGHT, IWidgetConstants.ARC, IWidgetConstants.ARC);
 				
 				e.gc.setFont(IWidgetConstants.OS_FONT);
@@ -98,28 +97,6 @@ public class IOSCheckbox extends Canvas {
 				redraw();
 			}
 		});
-	}
-	
-	/**
-	 * Computes a String size
-	 */
-	private int computeStringSize(Composite parent, String stringToCompute){
-		Label label = null;
-		try {
-			label = new Label(parent, SWT.NONE);
-			label.setFont(IWidgetConstants.OS_FONT);
-			label.setText(stringToCompute);
-			Point computedSize = label.computeSize(SWT.DEFAULT, SWT.DEFAULT);
-			
-			return computedSize.x;
-		} catch (Exception e) {
-			// Should do something
-			return 0;
-		} finally {
-			if(label != null) {
-				label.dispose();
-			}
-		}
 	}
 	
 	public boolean isSelected() {

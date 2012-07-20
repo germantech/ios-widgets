@@ -10,6 +10,7 @@ import org.eclipse.swt.widgets.Shell;
 
 import br.com.germantech.ioswidgets.checkbox.IOSCheckbox;
 import br.com.germantech.ioswidgets.toggle.IOSToggle;
+import br.com.germantech.ioswidgets.button.IOSButton;
 
 public class MainWindow {
 
@@ -48,7 +49,7 @@ public class MainWindow {
 	 */
 	protected void createContents() {
 		shell = new Shell(SWT.MIN | SWT.CLOSE);
-		shell.setSize(333, 280);
+		shell.setSize(472, 355);
 		shell.setText("iOS checkbox");
 		shell.setLayout(new GridLayout(1, false));
 		
@@ -104,7 +105,7 @@ public class MainWindow {
 		lblToggle.setText("Toggle");
 		
 		IOSToggle toggle = new IOSToggle(composite, "Untoggle");
-		GridData gd_toggle = new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1);
+		GridData gd_toggle = new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1);
 		gd_toggle.heightHint = 38;
 		gd_toggle.widthHint = 215;
 		toggle.setLayoutData(gd_toggle);
@@ -112,10 +113,23 @@ public class MainWindow {
 		
 		IOSToggle toggle_1 = new IOSToggle(composite, "Toggled");
 		toggle_1.setToggled(true);
-		GridData gd_toggle_1 = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+		GridData gd_toggle_1 = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
 		gd_toggle_1.heightHint = 30;
 		gd_toggle_1.widthHint = 151;
 		toggle_1.setLayoutData(gd_toggle_1);
+		
+		Label lblNewLabel = new Label(composite, SWT.SEPARATOR | SWT.HORIZONTAL);
+		lblNewLabel.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 1));
+		lblNewLabel.setText("New Label");
+		
+		Label lblButto = new Label(composite, SWT.NONE);
+		lblButto.setText("Button");
+		
+		IOSButton button = new IOSButton(composite, "Selection button");
+		GridData gd_button = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
+		gd_button.heightHint = 34;
+		gd_button.widthHint = 162;
+		button.setLayoutData(gd_button);
 
 	}
 }
