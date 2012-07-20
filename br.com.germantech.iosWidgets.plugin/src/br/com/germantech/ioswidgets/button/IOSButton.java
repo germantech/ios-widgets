@@ -29,6 +29,7 @@ public class IOSButton extends Canvas {
 				int width = IOSHelper.computeStringSize(parent, getText()) + 16;
 				
 				e.gc.setAntialias(SWT.ON);
+				e.gc.setAdvanced(true);
 				e.gc.setFont(IWidgetConstants.OS_FONT);
 				
 				if(!clicked){

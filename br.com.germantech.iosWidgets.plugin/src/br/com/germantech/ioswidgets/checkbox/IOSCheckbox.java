@@ -58,6 +58,7 @@ public class IOSCheckbox extends Canvas {
 				int width = status+SLIDER_WIDTH;
 				
 				e.gc.setAntialias(SWT.ON);
+				e.gc.setAdvanced(true);
 				
 				if(!selected){
 					e.gc.setForeground(IWidgetConstants.COLOR_TOP);

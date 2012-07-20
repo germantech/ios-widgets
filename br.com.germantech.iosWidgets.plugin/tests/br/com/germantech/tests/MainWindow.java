@@ -12,6 +12,7 @@ import br.com.germantech.ioswidgets.checkbox.IOSCheckbox;
 import br.com.germantech.ioswidgets.toggle.IOSToggle;
 import br.com.germantech.ioswidgets.button.IOSButton;
 import br.com.germantech.ioswidgets.slider.IOSSlider;
+import br.com.germantech.ioswidgets.slider.listener.IOSSliderListener;
 
 public class MainWindow {
 
@@ -50,8 +51,8 @@ public class MainWindow {
 	 */
 	protected void createContents() {
 		shell = new Shell(SWT.MIN | SWT.CLOSE);
-		shell.setSize(472, 411);
-		shell.setText("iOS checkbox");
+		shell.setSize(429, 397);
+		shell.setText("iOS widgets");
 		shell.setLayout(new GridLayout(1, false));
 		
 		Composite composite = new Composite(shell, SWT.NONE);
@@ -71,33 +72,18 @@ public class MainWindow {
 		
 		IOSCheckbox iosCheckSim = new IOSCheckbox(composite);
 		iosCheckSim.setSelected(true);
-		GridData gd_iosCheckSim = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1);
+		GridData gd_iosCheckSim = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
 		gd_iosCheckSim.heightHint = 30;
 		iosCheckSim.setLayoutData(gd_iosCheckSim);
-		
-		Label label = new Label(composite, SWT.SEPARATOR | SWT.HORIZONTAL);
-		label.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 1));
 		
 		Label lblTextos = new Label(composite, SWT.NONE);
 		lblTextos.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
 		lblTextos.setText("Textos");
 		
 		IOSCheckbox iosCheckHomologa = new IOSCheckbox(composite,"Produção", "Homologação");
-		GridData gd_iosCheckHomologa = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1);
+		GridData gd_iosCheckHomologa = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
 		gd_iosCheckHomologa.heightHint = 30;
 		iosCheckHomologa.setLayoutData(gd_iosCheckHomologa);
-		
-		Label label_1 = new Label(composite, SWT.SEPARATOR | SWT.HORIZONTAL);
-		label_1.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 1));
-		
-		Label lblFrases = new Label(composite, SWT.NONE);
-		lblFrases.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
-		lblFrases.setText("Frases");
-		
-		IOSCheckbox iosCheckFrase = new IOSCheckbox(composite,"Frase bem longa aqui","Outra fase bem longa aqui");
-		GridData gd_iosCheckFrase = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
-		gd_iosCheckFrase.heightHint = 30;
-		iosCheckFrase.setLayoutData(gd_iosCheckFrase);
 		
 		Label label_2 = new Label(composite, SWT.SEPARATOR | SWT.HORIZONTAL);
 		label_2.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 1));
@@ -106,7 +92,7 @@ public class MainWindow {
 		lblToggle.setText("Toggle");
 		
 		IOSToggle toggle = new IOSToggle(composite, "Untoggle");
-		GridData gd_toggle = new GridData(SWT.FILL, SWT.FILL, false, false, 1, 1);
+		GridData gd_toggle = new GridData(SWT.FILL, SWT.FILL, true, false, 1, 1);
 		gd_toggle.heightHint = 38;
 		gd_toggle.widthHint = 215;
 		toggle.setLayoutData(gd_toggle);
@@ -114,7 +100,7 @@ public class MainWindow {
 		
 		IOSToggle toggle_1 = new IOSToggle(composite, "Toggled");
 		toggle_1.setToggled(true);
-		GridData gd_toggle_1 = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
+		GridData gd_toggle_1 = new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1);
 		gd_toggle_1.heightHint = 30;
 		gd_toggle_1.widthHint = 151;
 		toggle_1.setLayoutData(gd_toggle_1);
@@ -127,7 +113,7 @@ public class MainWindow {
 		lblButto.setText("Button");
 		
 		IOSButton button = new IOSButton(composite, "Selection button");
-		GridData gd_button = new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1);
+		GridData gd_button = new GridData(SWT.FILL, SWT.CENTER, true, false, 1, 1);
 		gd_button.heightHint = 34;
 		gd_button.widthHint = 162;
 		button.setLayoutData(gd_button);
@@ -135,18 +121,33 @@ public class MainWindow {
 		Label lblNewLabel_1 = new Label(composite, SWT.SEPARATOR | SWT.HORIZONTAL);
 		lblNewLabel_1.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 1));
 		lblNewLabel_1.setText("New Label");
-		new Label(composite, SWT.NONE);
-		new Label(composite, SWT.NONE);
 		
 		Label lblNewLabel_2 = new Label(composite, SWT.NONE);
 		lblNewLabel_2.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
 		lblNewLabel_2.setText("Slider");
 		
+		final Label lblNewLabel_3 = new Label(composite, SWT.NONE);
+		GridData gd_lblNewLabel_3 = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+		gd_lblNewLabel_3.widthHint = 234;
+		lblNewLabel_3.setLayoutData(gd_lblNewLabel_3);
+		new Label(composite, SWT.NONE);
+		
 		IOSSlider slider = new IOSSlider(composite, 200);
-		GridData gd_slider = new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1);
-		gd_slider.widthHint = 305;
-		gd_slider.heightHint = 45;
+		slider.addIOSSliderListener(new IOSSliderListener() {
+			
+			@Override
+			public void fire(int position) {
+				lblNewLabel_3.setText("Posição: "+position);
+			}
+		});
+		slider.setTotalSize(250);
+		GridData gd_slider = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
+		gd_slider.widthHint = 100;
+		gd_slider.heightHint = 40;
 		slider.setLayoutData(gd_slider);
+		
+		
+		lblNewLabel_3.setText("Posição: 0");
 
 	}
 }
