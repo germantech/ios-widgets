@@ -3,7 +3,7 @@
 ## Build status  [![Build Status](https://secure.travis-ci.org/germantech/ios-widgets.png?branch=master)](http://travis-ci.org/germantech/ios-widgets)
 
 ## Sample
-![Screenshot](http://i.imgur.com/RHaWM.png)
+![Screenshot](http://i.imgur.com/L0Jw2.png)
 
 
 ## Current widgets

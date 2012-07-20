@@ -6,11 +6,11 @@
 	<parent>
 		<groupId>br.com.germantech.iosWidgets</groupId>
 		<artifactId>ws</artifactId>
-		<version>0.0.2</version>
+		<version>0.1.0</version>
 		<relativePath>../br.com.germantech.iosWidgets.parent/pom.xml</relativePath>
 	</parent>
 	<groupId>br.com.germantech.iosWidgets</groupId>
 	<artifactId>br.com.germantech.iosWidgets.plugin</artifactId>
-	<version>0.0.2</version>
+	<version>0.1.0</version>
 	<packaging>eclipse-plugin</packaging>
 </project>
