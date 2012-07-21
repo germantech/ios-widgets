@@ -32,9 +32,9 @@ public class IOSToggle extends Canvas {
 				int width = status;
 				
 				e.gc.setAntialias(SWT.ON);
+				e.gc.setAdvanced(true);
 				
 				if(!toggled){
-					//Paint upside down
 					e.gc.setForeground(IWidgetConstants.COLOR_TOP);
 					e.gc.setBackground(IWidgetConstants.COLOR_BOTTOM);
 				
@@ -43,7 +43,7 @@ public class IOSToggle extends Canvas {
 					e.gc.setBackground(IWidgetConstants.COLOR_BOTTOM_SELECTED_GREEN);
 				}
 				
-				e.gc.fillGradientRectangle(1, 1,width-1, HEIGHT-1, true);
+				e.gc.fillGradientRectangle(1, 1, width-1, HEIGHT-1, true);
 				e.gc.drawRoundRectangle(0, 0, width, HEIGHT, IWidgetConstants.ARC, IWidgetConstants.ARC);
 				
 				e.gc.setFont(IWidgetConstants.OS_FONT);

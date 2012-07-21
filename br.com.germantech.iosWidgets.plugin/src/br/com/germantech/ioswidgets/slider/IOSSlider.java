@@ -56,9 +56,11 @@ public class IOSSlider extends Canvas {
 			
 			@Override
 			public void mouseMove(MouseEvent e) {
+				if(e.x <0 || e.x > getTotalSize())
+					return;
+				
 				if(down){
 					x = e.x;
-					System.out.println(x+" - "+getTotalSize());
 					if(x >= 0 && x <= getTotalSize()){
 						setPosition(x);
 						fireListeners();

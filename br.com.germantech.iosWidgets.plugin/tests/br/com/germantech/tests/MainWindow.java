@@ -51,7 +51,7 @@ public class MainWindow {
 	 */
 	protected void createContents() {
 		shell = new Shell(SWT.MIN | SWT.CLOSE);
-		shell.setSize(429, 397);
+		shell.setSize(395, 354);
 		shell.setText("iOS widgets");
 		shell.setLayout(new GridLayout(1, false));
 		
