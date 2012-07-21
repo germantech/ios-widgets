@@ -19,5 +19,5 @@
 * Show a different style when disabled;  
 * Combobox;  
 * Text with outline border;    
-* ~~Button~~
+* ~~Button;~~
 * Slider is somewhat weird. sometimes he didn't hit `totalSize` while moving the mouse;  
