@@ -3,13 +3,14 @@
 ## Build status [![Build Status](https://secure.travis-ci.org/germantech/ios-widgets.png?branch=master)](http://travis-ci.org/germantech/ios-widgets)
 
 ## Sample
-![Screenshot](http://i.imgur.com/uCjPf.png)
+![Screenshot](http://i.imgur.com/kZPVa.png)
 
 ## Current widgets
-* Checkbox
-* Toggle button  
-* Button
-* Slider
+* Checkbox;
+* Toggle button;  
+* Button;
+* Slider;  
+* Shuffle checkbox;
 
 ## TODO  
 * Get rid of `slider.png` and `brush25.png`;  

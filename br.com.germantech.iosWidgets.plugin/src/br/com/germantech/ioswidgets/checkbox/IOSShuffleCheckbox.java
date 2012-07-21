@@ -21,6 +21,12 @@ public class IOSShuffleCheckbox extends Canvas {
 	private static int HEIGHT = 26;
 	
 	private boolean selected = false;
+	private boolean red = false;
+	
+	public IOSShuffleCheckbox(final Composite parent, boolean red){
+		this(parent);
+		this.red = red;
+	}
 	
 	/**
 	 * Instantiates a new {@link IOSShuffleCheckbox} component, defaults unselected
@@ -43,8 +49,13 @@ public class IOSShuffleCheckbox extends Canvas {
 					e.gc.setBackground(IWidgetConstants.COLOR_BOTTOM);
 				
 				} else {
-					e.gc.setForeground(IWidgetConstants.COLOR_TOP_SELECTED_GREEN);
-					e.gc.setBackground(IWidgetConstants.COLOR_BOTTOM_SELECTED_GREEN);
+					if(!red){
+						e.gc.setForeground(IWidgetConstants.COLOR_TOP_SELECTED_GREEN);
+						e.gc.setBackground(IWidgetConstants.COLOR_BOTTOM_SELECTED_GREEN);
+					} else {
+						e.gc.setForeground(IWidgetConstants.COLOR_TOP_SELECTED_RED);
+						e.gc.setBackground(IWidgetConstants.COLOR_BOTTOM_SELECTED_RED);
+					}
 				}
 				
 				e.gc.fillGradientRectangle(1, 1,width-1, HEIGHT-1, true);
