@@ -13,6 +13,11 @@ import br.com.germantech.helpers.IOSHelper;
 import br.com.germantech.ioswidgets.IWidgetConstants;
 import br.com.germantech.resourceManager.SWTResourceManager;
 
+/**
+ * 
+ * @author Luiz Eduardo Kowalski, Alexsando Specht
+ *
+ */
 public class IOSButton extends Canvas {
 	private String text;
 	private boolean clicked = false;
@@ -42,7 +47,7 @@ public class IOSButton extends Canvas {
 				
 				e.gc.fillGradientRectangle(1, 1, width-1, 25, true);
 				e.gc.setForeground(IWidgetConstants.COLOR_BORDER);
-				e.gc.drawRoundRectangle(0, 0, width, 26, IWidgetConstants.ARC, IWidgetConstants.ARC);
+				e.gc.drawRoundRectangle(0, 0, width, 26, IWidgetConstants.ARC_WIDTH_HEIGHT, IWidgetConstants.ARC_WIDTH_HEIGHT);
 				
 				//Draw the shadow
 				e.gc.setForeground(IWidgetConstants.COLOR_BORDER);

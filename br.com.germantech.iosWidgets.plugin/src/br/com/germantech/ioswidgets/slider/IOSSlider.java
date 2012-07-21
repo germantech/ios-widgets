@@ -17,6 +17,11 @@ import org.eclipse.swt.widgets.Composite;
 import br.com.germantech.ioswidgets.IWidgetConstants;
 import br.com.germantech.ioswidgets.slider.listener.IOSSliderListener;
 
+/**
+ * 
+ * @author Luiz Eduardo Kowalski, Alexsando Specht
+ *
+ */
 public class IOSSlider extends Canvas {
 
 	private int totalSize;
@@ -88,12 +93,12 @@ public class IOSSlider extends Canvas {
 			@Override
 			public void mouseScrolled(MouseEvent e) {
 				if(e.count == -3){
-					if(x > 10)
+					if(x >= 10)
 						x-=10;
 					else 
 						x = 0;
 				} else {
-					if(x > getTotalSize()-10)
+					if(x >= getTotalSize()-10)
 						x=getTotalSize();
 					else
 						x+=10;
@@ -115,6 +120,7 @@ public class IOSSlider extends Canvas {
 	}
 
 	public void addIOSSliderListener(IOSSliderListener listener){
+		checkWidget();
 		this.listeners.add(listener);
 	}
 	

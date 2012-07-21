@@ -20,8 +20,8 @@ public interface IWidgetConstants {
 	public static Color COLOR_TOP_SELECTED = SWTResourceManager.getColor(55, 114, 185);
 	public static Color COLOR_BOTTOM_SELECTED = SWTResourceManager.getColor(130, 179, 244);
 	
-	public static Color COLOR_TOP_SELECTED_GREEN = SWTResourceManager.getColor(66, 128, 0);
-	public static Color COLOR_BOTTOM_SELECTED_GREEN = SWTResourceManager.getColor(97, 189,0);
+	public static Color COLOR_TOP_SELECTED_GREEN = SWTResourceManager.getColor(107, 156, 13);
+	public static Color COLOR_BOTTOM_SELECTED_GREEN = SWTResourceManager.getColor(133, 181,59);
 	
 	public static Color COLOR_BUTTON_TOP = SWTResourceManager.getColor(211, 215, 227);
 	public static Color COLOR_BUTTON_BOTTOM= SWTResourceManager.getColor(144, 153, 170);
@@ -34,5 +34,5 @@ public interface IWidgetConstants {
 	
 	public static Font OS_FONT = SWTResourceManager.getFont(Display.getDefault().getSystemFont().getFontData()[0]+"", 11, SWT.BOLD);
 	
-	public static Integer ARC = 8;
+	public static Integer ARC_WIDTH_HEIGHT = 8;
 }

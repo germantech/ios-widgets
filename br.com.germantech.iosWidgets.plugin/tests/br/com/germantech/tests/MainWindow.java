@@ -13,6 +13,7 @@ import br.com.germantech.ioswidgets.toggle.IOSToggle;
 import br.com.germantech.ioswidgets.button.IOSButton;
 import br.com.germantech.ioswidgets.slider.IOSSlider;
 import br.com.germantech.ioswidgets.slider.listener.IOSSliderListener;
+import br.com.germantech.ioswidgets.checkbox.IOSShuffleCheckbox;
 
 public class MainWindow {
 
@@ -51,7 +52,7 @@ public class MainWindow {
 	 */
 	protected void createContents() {
 		shell = new Shell(SWT.MIN | SWT.CLOSE);
-		shell.setSize(395, 354);
+		shell.setSize(395, 399);
 		shell.setText("iOS widgets");
 		shell.setLayout(new GridLayout(1, false));
 		
@@ -61,7 +62,7 @@ public class MainWindow {
 		
 		Label lblSimno = new Label(composite, SWT.NONE);
 		lblSimno.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
-		lblSimno.setText("Sim/Não");
+		lblSimno.setText("Default values");
 		
 		IOSCheckbox iosCheckNao = new IOSCheckbox(composite);
 		GridData gd_iosCheckNao = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
@@ -78,12 +79,22 @@ public class MainWindow {
 		
 		Label lblTextos = new Label(composite, SWT.NONE);
 		lblTextos.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
-		lblTextos.setText("Textos");
+		lblTextos.setText("Words");
 		
 		IOSCheckbox iosCheckHomologa = new IOSCheckbox(composite,"Produção", "Homologação");
 		GridData gd_iosCheckHomologa = new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1);
 		gd_iosCheckHomologa.heightHint = 30;
 		iosCheckHomologa.setLayoutData(gd_iosCheckHomologa);
+		
+		Label lblVisualInf = new Label(composite, SWT.NONE);
+		lblVisualInf.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
+		lblVisualInf.setText("Visual ref;");
+		
+		IOSShuffleCheckbox visualCheckbox = new IOSShuffleCheckbox(composite);
+		visualCheckbox.setSelected(true);
+		GridData gd_visualCheckbox = new GridData(SWT.LEFT, SWT.CENTER, false, false, 1, 1);
+		gd_visualCheckbox.heightHint = 38;
+		visualCheckbox.setLayoutData(gd_visualCheckbox);
 		
 		Label label_2 = new Label(composite, SWT.SEPARATOR | SWT.HORIZONTAL);
 		label_2.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 1));

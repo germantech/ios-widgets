@@ -11,6 +11,11 @@ import org.eclipse.swt.widgets.Composite;
 import br.com.germantech.helpers.IOSHelper;
 import br.com.germantech.ioswidgets.IWidgetConstants;
 
+/**
+ * 
+ * @author Luiz Eduardo Kowalski
+ *
+ */
 public class IOSToggle extends Canvas {
 	private static int HEIGHT = 26;
 	
@@ -33,10 +38,11 @@ public class IOSToggle extends Canvas {
 				
 				e.gc.setAntialias(SWT.ON);
 				e.gc.setAdvanced(true);
+				e.gc.setFont(IWidgetConstants.OS_FONT);
 				
 				if(!toggled){
-					e.gc.setForeground(IWidgetConstants.COLOR_TOP);
-					e.gc.setBackground(IWidgetConstants.COLOR_BOTTOM);
+					e.gc.setBackground(IWidgetConstants.COLOR_TOP);
+					e.gc.setForeground(IWidgetConstants.COLOR_BOTTOM);
 				
 				} else {
 					e.gc.setForeground(IWidgetConstants.COLOR_TOP_SELECTED_GREEN);
@@ -44,9 +50,14 @@ public class IOSToggle extends Canvas {
 				}
 				
 				e.gc.fillGradientRectangle(1, 1, width-1, HEIGHT-1, true);
-				e.gc.drawRoundRectangle(0, 0, width, HEIGHT, IWidgetConstants.ARC, IWidgetConstants.ARC);
 				
-				e.gc.setFont(IWidgetConstants.OS_FONT);
+				//Set the foreground to make the border
+				if(!toggled)
+					e.gc.setForeground(IWidgetConstants.COLOR_TOP);
+				else
+					e.gc.setForeground(IWidgetConstants.COLOR_TOP_SELECTED_GREEN);
+				
+				e.gc.drawRoundRectangle(0, 0, width, HEIGHT, IWidgetConstants.ARC_WIDTH_HEIGHT, IWidgetConstants.ARC_WIDTH_HEIGHT);
 				
 				if(!toggled){
 					e.gc.setForeground(IWidgetConstants.COLOR_DARK_GRAY);

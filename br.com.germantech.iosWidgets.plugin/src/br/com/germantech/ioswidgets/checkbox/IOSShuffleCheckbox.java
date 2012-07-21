@@ -10,14 +10,9 @@ import org.eclipse.swt.widgets.Canvas;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 
-import br.com.germantech.helpers.IOSHelper;
 import br.com.germantech.ioswidgets.IWidgetConstants;
 
-/**
- * @author Luiz Eduardo Kowalski <@luizkowalski>
- *
- */
-public class IOSCheckbox extends Canvas {
+public class IOSShuffleCheckbox extends Canvas {
 	
 	private static Image SLIDER = 
 			new Image(Display.getDefault(), IOSCheckbox.class.getResourceAsStream("slider.png"));
@@ -28,31 +23,17 @@ public class IOSCheckbox extends Canvas {
 	private boolean selected = false;
 	
 	/**
-	 * Default constructor with values "Sim" and "Não" for selected and unselected values, respectively
-	 * @param parent
-	 */
-	public IOSCheckbox(final Composite parent) {
-		this(parent, "Sim", "Não");
-	}
-
-	/**
-	 * Instantiates a new {@link IOSCheckbox} component, defaults unselected
+	 * Instantiates a new {@link IOSShuffleCheckbox} component, defaults unselected
 	 * @param parent the parent composite
-	 * @param textSelected the default {@link String} when checkbox is selected
-	 * @param textUnselected the default {@link String} when checkbox is unselected
 	 */
-	public IOSCheckbox(final Composite parent, final String textSelected, final String textUnselected) {
+	public IOSShuffleCheckbox(final Composite parent) {
 		super(parent, SWT.NONE);
 		
 		addPaintListener(new PaintListener() {
 			@Override
 			public void paintControl(PaintEvent e) {
-				String biggestString = textSelected.length() > textUnselected.length() ? textSelected : textUnselected;
 				
-				int x = IOSHelper.computeStringSize(parent, biggestString);
-				int xOff = IOSHelper.computeStringSize(parent, textUnselected);
-				int status = x+16;
-				int width = status+SLIDER_WIDTH;
+				int width = 50+SLIDER_WIDTH;
 				
 				e.gc.setAntialias(SWT.ON);
 				e.gc.setAdvanced(true);
@@ -62,8 +43,8 @@ public class IOSCheckbox extends Canvas {
 					e.gc.setBackground(IWidgetConstants.COLOR_BOTTOM);
 				
 				} else {
-					e.gc.setForeground(IWidgetConstants.COLOR_TOP_SELECTED);
-					e.gc.setBackground(IWidgetConstants.COLOR_BOTTOM_SELECTED);
+					e.gc.setForeground(IWidgetConstants.COLOR_TOP_SELECTED_GREEN);
+					e.gc.setBackground(IWidgetConstants.COLOR_BOTTOM_SELECTED_GREEN);
 				}
 				
 				e.gc.fillGradientRectangle(1, 1,width-1, HEIGHT-1, true);
@@ -74,13 +55,11 @@ public class IOSCheckbox extends Canvas {
 				
 				if(!selected){
 					e.gc.setForeground(IWidgetConstants.COLOR_DARK_GRAY);
-					e.gc.drawText(textUnselected, width-xOff-8, 6, true);
 					e.gc.drawImage(SLIDER, 0, 0);
 				} else {
 					int end = width - SLIDER_WIDTH + 1;
 					e.gc.drawImage(SLIDER, end, 0);
 					e.gc.setForeground(IWidgetConstants.COLOR_WHITE);
-					e.gc.drawText(textSelected, 8, 6, true);
 				}
 				
 				setSize(width+1, HEIGHT+1);
