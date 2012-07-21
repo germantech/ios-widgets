@@ -174,7 +174,7 @@ public class MainWindow {
 			
 			@Override
 			public void fire(int position) {
-				lblNewLabel_3.setText("Posição: "+position);
+				lblNewLabel_3.setText("Position: "+position);
 			}
 		});
 		slider.setTotalSize(250);
