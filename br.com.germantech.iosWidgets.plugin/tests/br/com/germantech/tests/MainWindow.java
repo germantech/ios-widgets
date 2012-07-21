@@ -158,7 +158,7 @@ public class MainWindow {
 		slider.setLayoutData(gd_slider);
 		
 		
-		lblNewLabel_3.setText("Posição: 0");
+		lblNewLabel_3.setText("Position: 0");
 
 	}
 }
