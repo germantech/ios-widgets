@@ -23,8 +23,8 @@ public interface IWidgetConstants {
 	public static Color COLOR_TOP_SELECTED_GREEN = SWTResourceManager.getColor(107, 156, 13);
 	public static Color COLOR_BOTTOM_SELECTED_GREEN = SWTResourceManager.getColor(133, 181,59);
 	
-	public static Color COLOR_TOP_SELECTED_RED = SWTResourceManager.getColor(205,51,51);
-	public static Color COLOR_BOTTOM_SELECTED_RED = SWTResourceManager.getColor(255,64,64);
+	public static Color COLOR_TOP_SELECTED_RED = SWTResourceManager.getColor(200,0,0);
+	public static Color COLOR_BOTTOM_SELECTED_RED = SWTResourceManager.getColor(238,0,0);
 	
 	public static Color COLOR_BUTTON_TOP = SWTResourceManager.getColor(211, 215, 227);
 	public static Color COLOR_BUTTON_BOTTOM= SWTResourceManager.getColor(144, 153, 170);
