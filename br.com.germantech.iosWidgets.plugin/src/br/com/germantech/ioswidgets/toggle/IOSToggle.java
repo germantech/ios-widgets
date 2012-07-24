@@ -45,8 +45,8 @@ public class IOSToggle extends Canvas {
 					e.gc.setForeground(IWidgetConstants.COLOR_BOTTOM);
 				
 				} else {
-					e.gc.setForeground(IWidgetConstants.COLOR_TOP_SELECTED_GREEN);
-					e.gc.setBackground(IWidgetConstants.COLOR_BOTTOM_SELECTED_GREEN);
+					e.gc.setForeground(IWidgetConstants.COLOR_TOP_SELECTED);
+					e.gc.setBackground(IWidgetConstants.COLOR_BOTTOM_SELECTED);
 				}
 				
 				e.gc.fillGradientRectangle(1, 1, width-1, HEIGHT-1, true);
@@ -55,7 +55,7 @@ public class IOSToggle extends Canvas {
 				if(!toggled)
 					e.gc.setForeground(IWidgetConstants.COLOR_TOP);
 				else
-					e.gc.setForeground(IWidgetConstants.COLOR_TOP_SELECTED_GREEN);
+					e.gc.setForeground(IWidgetConstants.COLOR_TOP_SELECTED);
 				
 				e.gc.drawRoundRectangle(0, 0, width, HEIGHT, IWidgetConstants.ARC_WIDTH_HEIGHT, IWidgetConstants.ARC_WIDTH_HEIGHT);
 				
