@@ -4,7 +4,7 @@
 <target name="ios" sequenceNumber="9">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.platform.feature.group" version="3.8.0.v20120607-071945-9gF7jI7nG5qByXMVdkhRMWBQlF4PnDCLybDCPQ"/>
+<unit id="org.eclipse.platform.feature.group" version="3.8.1.v20120815-074604-9gF7jI7wG5qDyZMWGg8NPvDbfWFWlIJU-kYaOQ"/>
 <unit id="org.eclipse.equinox.executable.feature.group" version="3.6.0.v20120522-1813-7P7OG2BFLWUl7UmbVUO9iCm"/>
 <repository location="http://download.eclipse.org/eclipse/updates/3.8"/>
 </location>

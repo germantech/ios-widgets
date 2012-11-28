@@ -42,7 +42,7 @@ public class IOSCheckbox extends Canvas {
 	 * @param textUnselected the default {@link String} when checkbox is unselected
 	 */
 	public IOSCheckbox(final Composite parent, final String textSelected, final String textUnselected) {
-		super(parent, SWT.NONE);
+		super(parent, SWT.DOUBLE_BUFFERED);
 		
 		addPaintListener(new PaintListener() {
 			@Override

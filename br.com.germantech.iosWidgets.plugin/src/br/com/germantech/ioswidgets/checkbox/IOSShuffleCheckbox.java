@@ -33,7 +33,7 @@ public class IOSShuffleCheckbox extends Canvas {
 	 * @param parent the parent composite
 	 */
 	public IOSShuffleCheckbox(final Composite parent) {
-		super(parent, SWT.NONE);
+		super(parent, SWT.DOUBLE_BUFFERED);
 		
 		addPaintListener(new PaintListener() {
 			@Override

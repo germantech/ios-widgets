@@ -23,7 +23,7 @@ public class IOSButton extends Canvas {
 	private boolean clicked = false;
 
 	public IOSButton(final Composite parent, String text) {
-		super(parent, SWT.NONE);
+		super(parent, SWT.DOUBLE_BUFFERED);
 		if(text == null)
 			throw new SWTException("Button text can't be null");
 		this.text = text;

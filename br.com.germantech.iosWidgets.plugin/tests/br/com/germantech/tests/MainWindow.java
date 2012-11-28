@@ -5,16 +5,16 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 
-import br.com.germantech.ioswidgets.checkbox.IOSCheckbox;
-import br.com.germantech.ioswidgets.toggle.IOSToggle;
 import br.com.germantech.ioswidgets.button.IOSButton;
+import br.com.germantech.ioswidgets.checkbox.IOSCheckbox;
+import br.com.germantech.ioswidgets.checkbox.IOSShuffleCheckbox;
 import br.com.germantech.ioswidgets.slider.IOSSlider;
 import br.com.germantech.ioswidgets.slider.listener.IOSSliderListener;
-import br.com.germantech.ioswidgets.checkbox.IOSShuffleCheckbox;
-import org.eclipse.swt.widgets.Group;
+import br.com.germantech.ioswidgets.toggle.IOSToggle;
 
 public class MainWindow {
 
@@ -53,7 +53,7 @@ public class MainWindow {
 	 */
 	protected void createContents() {
 		shell = new Shell(SWT.MIN | SWT.CLOSE);
-		shell.setSize(417, 496);
+		shell.setSize(417, 498);
 		shell.setText("iOS widgets");
 		shell.setLayout(new GridLayout(1, false));
 		

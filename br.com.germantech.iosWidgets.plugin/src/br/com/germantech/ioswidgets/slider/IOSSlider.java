@@ -32,7 +32,7 @@ public class IOSSlider extends Canvas {
 	private List<IOSSliderListener> listeners = new ArrayList<IOSSliderListener>();
 
 	public IOSSlider(Composite parent, int totalSize) {
-		super(parent, SWT.NONE);
+		super(parent, SWT.DOUBLE_BUFFERED);
 		this.totalSize = totalSize;
 		
 		addPaintListener(new PaintListener() {
