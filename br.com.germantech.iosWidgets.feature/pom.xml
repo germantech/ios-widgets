@@ -7,11 +7,11 @@
 		<relativePath>../br.com.germantech.iosWidgets.parent/pom.xml</relativePath>
 		<groupId>br.com.germantech.iosWidgets</groupId>
 		<artifactId>ws</artifactId>
-		<version>0.1.1</version>
+		<version>0.1.2</version>
 	</parent>
 	<groupId>br.com.germantech.iosWidgets</groupId>
 	<artifactId>br.com.germantech.iosWidgets.feature</artifactId>
-	<version>0.1.1</version>
+	<version>0.1.2</version>
 	<packaging>eclipse-feature</packaging>
 	
 </project>

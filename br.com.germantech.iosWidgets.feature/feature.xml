@@ -2,7 +2,7 @@
 <feature
       id="br.com.germantech.iosWidgets.feature"
       label="iOS Widget"
-      version="0.1.1"
+      version="0.1.2"
       provider-name="GermanTech Sistemas"
       plugin="br.com.germantech.iosWidgets.plugin">
 
