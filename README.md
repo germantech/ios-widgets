@@ -21,3 +21,11 @@
 * Text with outline border;    
 * ~~Button;~~
 * Slider is somewhat weird. sometimes he didn't hit `totalSize` while moving the mouse;  
+
+## How to get it
+
+```
+git clone https://github.com/germantech/ios-widgets.git  
+cd ios-widgets  
+mvn clean compile package
+```
