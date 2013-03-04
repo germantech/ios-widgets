@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="iOS Widgets" uid="iosWidgets" id="br.com.germantech.iosWidgets.plugin.iosWidgetsId" application="org.eclipse.ui.ide.workbench" version="0.1.2" useFeatures="true" includeLaunchers="true">
+<product name="iOS Widgets" uid="iosWidgets" id="br.com.germantech.iosWidgets.plugin.iosWidgetsId" application="org.eclipse.ui.ide.workbench" version="0.2.0" useFeatures="true" includeLaunchers="true">
 
 
    <configIni use="default">
@@ -29,7 +29,7 @@
    </plugins>
 
    <features>
-      <feature id="br.com.germantech.iosWidgets.feature" version="0.1.2"/>
+      <feature id="br.com.germantech.iosWidgets.feature" version="0.2.0"/>
    </features>
 
 
