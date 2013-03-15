@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde version="3.8"?>
 
-<target name="ios" sequenceNumber="11">
+<target name="ios" sequenceNumber="12">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.platform.feature.group" version="3.8.1.v20130118-180812-9jF7oIBFG8eU2pim-VbIlTuQjY0RWWK3x-bv4I"/>
+<unit id="org.eclipse.platform.feature.group" version="3.8.1.v20120815-074604-9gF7jI7wG5qDyZMWGg8NPvDbfWFWlIJU-kYaOQ"/>
 <repository location="http://download.eclipse.org/eclipse/updates/3.8"/>
 </location>
 </locations>
